@@ -1,5 +1,8 @@
 ﻿using System.Linq;
 
+/// <summary>
+/// https://www.codewars.com/kata/simple-encryption-number-1-alternating-split
+/// </summary>
 namespace CSharp_CodeWar.simple_encryption_number_1_alternating_split
 {
     public class Kata
