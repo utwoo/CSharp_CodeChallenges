@@ -10,7 +10,7 @@ namespace CSharp_CodeWar.printer_errors
     {
         public static string PrinterError(String s)
         {
-            return string.Format("{0}/{1}", s.ToCharArray().ToList().Where(c => c > 'm').Count(), s.Length);
+            return string.Format("{0}/{1}", s.ToList().Where(c => c > 'm').Count(), s.Length);
         }
     }
 }
