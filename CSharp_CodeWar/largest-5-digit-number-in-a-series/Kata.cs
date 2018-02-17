@@ -10,7 +10,7 @@ namespace CSharp_CodeWar.largest_5_digit_number_in_a_series
     {
         public static int GetNumber(string str)
         {
-            #region My
+            #region Me
             if (string.IsNullOrEmpty(str)) return 0;
 
             char maxNum = str.ToList().Max();
