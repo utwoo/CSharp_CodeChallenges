@@ -24,11 +24,18 @@ namespace CSharp_CodeWar.IQ_test
             return index + 1;
             #endregion
 
-            #region Best
+            #region Clever
             //var ints = numbers.Split(' ').Select(int.Parse).ToList();
             //var unique = ints.GroupBy(n => n % 2).OrderBy(c => c.Count()).First().First();
             //return ints.FindIndex(c => c == unique) + 1;
-            #endregion  
+            #endregion
+
+            #region Best
+            //var nums = numbers.Split(' ').Select((s, i) => new { Value = int.Parse(s), Index = i });
+            //var even = nums.Where(x => x.Value % 2 == 0);
+            //var odd = nums.Where(x => x.Value % 2 == 1);
+            //return even.Count() == 1 ? even.First().Index + 1 : odd.First().Index + 1;
+            #endregion
         }
     }
 }
