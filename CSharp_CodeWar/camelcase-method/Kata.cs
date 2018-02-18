@@ -3,6 +3,9 @@ using System.Globalization;
 
 namespace CSharp_CodeWar.camelcase_method
 {
+    /// <summary>
+    /// https://www.codewars.com/kata/camelcase-method/csharp
+    /// </summary>
     public static class Kata
     {
         public static string CamelCase(this string str)
