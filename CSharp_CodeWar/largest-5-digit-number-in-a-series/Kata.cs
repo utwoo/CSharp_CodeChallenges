@@ -1,36 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
-/// https://www.codewars.com/kata/largest-5-digit-number-in-a-series/csharp
+/// http://www.codewars.com/kata/58f5c63f1e26ecda7e000029/csharp
 /// </summary>
-namespace CSharp_CodeWar.largest_5_digit_number_in_a_series
+namespace CSharp_CodeWar.mexican_wave
 {
     public class Kata
     {
-        public static int GetNumber(string str)
+        public List<string> wave(string str)
         {
-            #region Me
-            if (string.IsNullOrEmpty(str)) return 0;
-
-            char maxNum = str.ToList().Max();
-            int largest = 0;
-            int index = str.IndexOf(maxNum);
-
-            while (index != -1)
+            return str.Select((c, i) =>
             {
-                largest = Math.Max(largest, Convert.ToInt32(new String(str.Skip(index).Take(5).ToArray())));
-                str = str.Substring(index + 1);
-                index = str.IndexOf(maxNum);
-            }
-
-            return largest;
-
-            #endregion
-
-            #region Clever
-            //return Enumerable.Range(0, str.Length - 4).Select(i => Convert.ToInt32(str.Substring(i, 5))).ToList().Max();
-            #endregion
+                return string.Format("{0}{1}{2}", str.Substring(0, i), Char.ToUpper(c), str.Substring(i + 1));
+            })
+            .Where(v => !v.Equals(str))
+            .ToList();
         }
     }
 }
