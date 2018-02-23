@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// http://www.codewars.com/kata/gap-in-primes
+/// </summary>
 namespace CSharp_CodeWar.gap_in_primes
 {
     public class Kata
