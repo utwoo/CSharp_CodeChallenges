@@ -8,7 +8,7 @@ namespace CSharp_CodeWar.Test.decode_the_Morse_code
         [Fact]
         public void MorseCodeDecoderBasicTest_1()
         {
-            string input = ".... . -.--   .--- ..- -.. .";
+            string input = "....  . -.--    .--- ..- -.. .";
             string expected = "HEY JUDE";
 
             string actual = Kata.Decode(input);

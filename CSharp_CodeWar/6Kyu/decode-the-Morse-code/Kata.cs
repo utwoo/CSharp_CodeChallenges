@@ -1,38 +1,64 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CSharp_CodeWar.data_reverse
+namespace CSharp_CodeWar.decode_the_Morse_code
 {
     /// <summary>
-    /// https://www.codewars.com/kata/569d488d61b812a0f7000015/csharp 
+    /// https://www.codewars.com/kata/decode-the-morse-code
     /// </summary>
     public static class Kata
     {
-        public static int[] DataReverse(int[] data)
+        private static Dictionary<string, char> dicMorse = new Dictionary<string, char>()
         {
-            #region Me
-            int length = data.Length;
-            List<int> result = new List<int>();
-            do
+            #region Morse
+            {".-",      'A' },
+            {"-...",    'B' },
+            {"-.-.",    'C' },
+            {"-..",     'D' },
+            {".",       'E' },
+            {"..-.",    'F' },
+            {"--.",     'G' },
+            {"....",    'H' },
+            {"..",      'I' },
+            {".---",    'J' },
+            {"-.-",     'K' },
+            {".-..",    'L' },
+            {"--",      'M' },
+            {"-.",      'N' },
+            {"---",     'O' },
+            {".--.",    'P' },
+            {"--.-",    'Q' },
+            {".-.",     'R' },
+            {"...",     'S' },
+            {"-",       'T' },
+            {"..-",     'U' },
+            {"...-",    'V' },
+            {".--",     'W' },
+            {"-..-",    'X' },
+            {"-.--",    'Y' },
+            {"--..",    'Z' },
+            {"-----",   '0' },
+            {".----",   '1' },
+            {"..---",   '2' },
+            {"...--",   '3' },
+            {"....-",   '4' },
+            {".....",   '5' },
+            {"-....",   '6' },
+            {"--...",   '7' },
+            {"---..",   '8' },
+            {"----.",   '9' },
+            #endregion
+        };
+
+        public static string Decode(string morseCode)
+        {
+            return morseCode.Split("   ", StringSplitOptions.RemoveEmptyEntries).Select(word =>
             {
-                result.AddRange(data.Skip(length - 8).Take(8));
-                length -= 8;
-            } while (length > 0);
-
-            return result.ToArray();
-            #endregion
-
-            #region Clever
-            //int[] bits = data;
-
-            //for (int i = 0; i < data.Length; i += 8)
-            //    Array.Reverse(bits, i, 8);
-
-            //Array.Reverse(bits);
-            //return bits;
-            #endregion
+                return word.Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(character => dicMorse[character])
+                .Aggregate(string.Empty, (str1, str2) => str1 + str2);
+            }).Aggregate(string.Empty, (str1, str2) => $"{str1 + " " + str2}").Trim();
         }
     }
 }
