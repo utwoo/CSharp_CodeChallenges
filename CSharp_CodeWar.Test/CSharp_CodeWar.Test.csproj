@@ -14,11 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CSharp_CodeWar\CSharp_CodeWar.csproj" />
+    <Folder Include="8Kyu\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="8Kyu\" />
+    <ProjectReference Include="..\CSharp_CodeWar\CSharp_CodeWar.csproj" />
   </ItemGroup>
 
 </Project>

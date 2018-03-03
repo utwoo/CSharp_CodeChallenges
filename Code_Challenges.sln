@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp_CodeWar", "CSharp_CodeWar\CSharp_CodeWar.csproj", "{A239CC0E-8015-40D6-901C-62C7F349ED2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp_CodeWar", "CSharp_CodeWar\CSharp_CodeWar.csproj", "{A239CC0E-8015-40D6-901C-62C7F349ED2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp_CodeWar.Test", "CSharp_CodeWar.Test\CSharp_CodeWar.Test.csproj", "{94D73A66-9785-4D4B-999C-020A50236897}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp_CodeWar.Test", "CSharp_CodeWar.Test\CSharp_CodeWar.Test.csproj", "{94D73A66-9785-4D4B-999C-020A50236897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp_LeetCode", "CSharp_LeetCode\CSharp_LeetCode.csproj", "{B2CA8AAA-8301-4F0F-8F41-7F358AFCAD36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{94D73A66-9785-4D4B-999C-020A50236897}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94D73A66-9785-4D4B-999C-020A50236897}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94D73A66-9785-4D4B-999C-020A50236897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2CA8AAA-8301-4F0F-8F41-7F358AFCAD36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2CA8AAA-8301-4F0F-8F41-7F358AFCAD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2CA8AAA-8301-4F0F-8F41-7F358AFCAD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2CA8AAA-8301-4F0F-8F41-7F358AFCAD36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
