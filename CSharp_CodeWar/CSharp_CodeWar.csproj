@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="8Kyu\" />
+    <Compile Remove="8Kyu\**" />
+    <EmbeddedResource Remove="8Kyu\**" />
+    <None Remove="8Kyu\**" />
   </ItemGroup>
 
 </Project>
